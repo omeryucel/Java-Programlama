@@ -1,0 +1,32 @@
+//Bu Program Sayı Tahmini Programıdır. 
+import java.util.Random;
+import java.util.Scanner;
+
+public class SayiTahminOyunu 
+{
+	public static void main(String[] args) 
+	{
+		int tahmin,sayac=0;
+		Scanner input=new Scanner(System.in);
+		Random rand=new Random();
+		System.out.println("-Sayı Tahmin Oyunu-");
+		System.out.println();
+		int sayi=rand.nextInt(50); //Program her çalıştırıldığında bilgisayar 0-50 arası rastgele bir sayı üretir.
+		while(true)
+		{
+			System.out.print("Sayıyı Tahmin Ediniz (0-50):");
+			tahmin=input.nextInt();
+			sayac++;
+			if(sayi==tahmin)
+			{
+				System.out.println("Tebrikler. "  +sayac+ " Adımda Bildiniz. ");
+				break;
+			}
+			else if(tahmin>sayi)
+				System.out.println("Tahmininiz Büyük. Daha Küçük Bir Sayı Tahmin Ediniz.");
+			else if(tahmin<sayi)
+				System.out.println("Tahmininiz Küçük. Daha Büyük Bir Sayı Tahmin Ediniz.");
+		}
+		
+	}
+}
