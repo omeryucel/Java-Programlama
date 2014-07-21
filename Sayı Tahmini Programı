@@ -12,7 +12,7 @@ public class SayiTahminOyunu
 		System.out.println("-Sayı Tahmin Oyunu-");
 		System.out.println();
 		int sayi=rand.nextInt(50); //Program her çalıştırıldığında bilgisayar 0-50 arası rastgele bir sayı üretir.
-		while(true)
+		while(true) //Sayının tahmin edilmesi halinde sonsuz döngüden çıkılacaktır.
 		{
 			System.out.print("Sayıyı Tahmin Ediniz (0-50):");
 			tahmin=input.nextInt();
@@ -27,6 +27,5 @@ public class SayiTahminOyunu
 			else if(tahmin<sayi)
 				System.out.println("Tahmininiz Küçük. Daha Büyük Bir Sayı Tahmin Ediniz.");
 		}
-		
 	}
 }
