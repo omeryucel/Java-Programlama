@@ -1,0 +1,38 @@
+//Bu Program e Üzeri x İfadesini Hesaplama Programıdır.
+import java.util.Scanner;
+public class eUzerix 
+{
+	public static void main(String[] args) //Kullanıcıdan sırasıyla x ve adım sayısı değerlerinin alındığı metot. 
+	{
+		int x;
+		int adimSayisi;
+		Scanner input=new Scanner(System.in);
+		System.out.printf("-e Üzeri x İfadesini Hesaplama Programı-\n\n");
+		System.out.print("e Üzeri x İfadesininin Hesaplanması İçin x Değerini Giriniz: ");
+		x=input.nextInt();
+		System.out.print("Hesaplamayı Kaç Adımda Gerçekleştirmek İstiyorsunuz?(Adım Sayısı): ");
+		adimSayisi=input.nextInt();
+		Sonuc(x,adimSayisi);
+	}
+	
+	public static double faktoriyelHesabı(int adimSayisi) //Adım sayısı değerinin kullanılarak faktöriyel hesabın yapıldığı metot.
+	{
+		int faktoriyel=1,i=1;
+		for(i=1;i<=adimSayisi;i++)
+		{
+			faktoriyel*=i;
+		}
+		 return faktoriyel;
+	}
+	
+	public static void Sonuc(int x,int adimSayisi) //e üzeri x ifadesinin değerinin hesaplandığı ve ekrana yazdırıldığı metot.
+	{
+		double toplam=0;
+		int i;
+		for(i=0;i<=adimSayisi;i++)
+	    {
+			toplam+=Math.pow(x,i)/faktoriyelHesabı(i);                 
+	    }      
+	    System.out.printf("e Üzeri %d İfadesinin Değeri: %f\n",x,toplam);
+	}	 
+}
