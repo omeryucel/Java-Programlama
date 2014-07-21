@@ -1,0 +1,21 @@
+//Bu Program PI Sayısının Yaklaşık Değerlerini Hesaplama Programıdır.
+public class PISayisi 
+{
+	public static void main(String[] args)
+	{
+		int i,sayac=0;
+		int n=200000; //İlk 200000 adım için hesaplama yapılmıştır.
+		double piSayisi=0;
+		System.out.printf("-Pİ Sayısının Yaklaşık Değerlerini Hesaplama Programı-\n\n");
+		for(i=1;i<=n;i++) //PI sayısının değerlerinin for döngüsüyle hesaplandığı yer.
+		{
+			if(i%2==0)
+				piSayisi-=1.0/(2*i-1);
+			else
+				piSayisi+=1.0/(2*i-1);
+			sayac++;
+			System.out.printf(sayac+ ".Adım: \t");
+			System.out.println(4*piSayisi);	
+		}
+	}
+}
