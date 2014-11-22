@@ -6,7 +6,7 @@ public class PISayisi
 		int i,sayac=0;
 		int n=200000; //İlk 200000 adım için hesaplama yapılmıştır.
 		double piSayisi=0;
-		System.out.printf("-Pİ Sayısının Yaklaşık Değerlerini Hesaplama Programı-\n\n");
+		System.out.printf("=Pİ Sayısının Yaklaşık Değerlerini Hesaplama Programı=\n\n");
 		for(i=1;i<=n;i++) //PI sayısının değerlerinin for döngüsüyle hesaplandığı yer.
 		{
 			if(i%2==0)
