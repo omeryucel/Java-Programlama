@@ -7,7 +7,7 @@ public class eUzerix
 		int x;
 		int adimSayisi;
 		Scanner input=new Scanner(System.in);
-		System.out.printf("-e Üzeri x İfadesini Hesaplama Programı-\n\n");
+		System.out.printf("=e^x İfadesini Hesaplama Programı=\n\n");
 		System.out.print("e Üzeri x İfadesininin Hesaplanması İçin x Değerini Giriniz: ");
 		x=input.nextInt();
 		System.out.print("Hesaplamayı Kaç Adımda Gerçekleştirmek İstiyorsunuz?(Adım Sayısı): ");
